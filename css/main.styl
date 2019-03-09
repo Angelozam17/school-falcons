@@ -16,19 +16,29 @@ $color_falcon = #b71c1c;
     left    0
     background-color $color_falcon
 
-.icon 
+.underline--center
+  position relative
+  &:after
+    content: ""
+    position: absolute
+    width:  30px
+    height: 2px
+    bottom -20px
+    left    50%
+    margin-left -15px
+    background-color $color_falcon
+
+.icon
   background-color: $color_falcon
 
 body
-  font-family 'Poppins', sans-serif;
+  font-family -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   font-size 1rem
-<<<<<<< HEAD
   font-weight: 300
-=======
->>>>>>> master
+  color #5a6169
 
   .bienvenida
-    min-height 100vh
+    min-height 700px
     background url(../images/carousel-3.jpg) no-repeat center fixed
     background-size: cover
     position: relative
@@ -56,13 +66,17 @@ body
       .contenido__wrapper
         padding 2em 0
         text-align center
+        img 
+          width 60%
 
   .caracteristicas
     width: 100%
+    border-bottom: 1px solid #eaebed
+
 
     .caracteristicas__bg
       position relative  
-      background url(../images/carousel-2.jpg) no-repeat center fixed
+      background url(../images/carousel-4.jpg) no-repeat center fixed
       background-size: cover
     
       &::before
@@ -72,20 +86,22 @@ body
         right:  0
         bottom: 0
         left    0
-        opacity: 0.6
-        background-color:#e9ecef
+        opacity: 0.7
+        background-color: #e9ecef
 
       img 
         position: absolute
         top  50%
         left 100%
         transform: translate(-50%, -50%)
-        max-width: 300px  
+        max-width: 270px  
+        border-radius: 60px
+        //box-shadow: 0 2px 7px rgba(33, 37, 41,.6)
         z-index 1
 
     .caracteristicas__inner
       width:      100%
-      min-height: 100vh
+      min-height: 700px
       padding-left:  180px
       padding-right: 50px
 
@@ -98,26 +114,41 @@ body
         text-align   center
         line-height: 65px
         font-size:   27px
-        box-shadow: 0 2px 4px rgba(33,37,41,.1), 0 7px 14px rgba(33,37,41,.1)
+        box-shadow: 0 2px 8px rgba(33,37,41,.3)
         border-radius 50%
-      
+  
+  .maestros
+    min-height: 500px
 
-@media (max-width: 992px)
-  .caracteristicas
+    .avatar
+      width: 100px
+      height 100px
+
+      img 
+        width: 100%
+        border-radius: 50px
+
+
+
+
+  @media (max-width: 992px)
     .caracteristicas__bg
       display none
     .caracteristicas__inner
       padding-left: 50px !important
 
-@media (max-width: 400px)
-  .caracteristicas
+   @media (max-width: 400px)
     .caracteristicas__inner
       padding-left: 10px !important
       padding-right: 10px !important
 
       article
         .icon
-          display none
+          display none   
+
+
+
+
 
 
 
