@@ -44,7 +44,7 @@ body {
   color: #5a6169;
 }
 body .bienvenida {
-  min-height: 700px;
+  min-height: 100vh;
   background: url("../images/carousel-3.jpg") no-repeat center fixed;
   background-size: cover;
   position: relative;
@@ -157,6 +157,21 @@ body .testimonios-experiencias .card .card-img-top {
 }
 body .testimonios-experiencias .card .button {
   border-radius: 50px;
+}
+body .newsletter form.input-group {
+  width: 500px;
+}
+body .newsletter .newsletter__input {
+  text-indent: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+body .newsletter .newsletter__input:invalid {
+  border-color: #f66;
+}
+body .newsletter .newsletter__btn {
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
 }
 @media (max-width: 992px) {
   body .caracteristicas__bg {

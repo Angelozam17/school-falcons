@@ -41,7 +41,7 @@ body
   color #5a6169
 
   .bienvenida
-    min-height 700px
+    min-height 100vh
     background url(../images/carousel-3.jpg) no-repeat center fixed
     background-size: cover
     position: relative
@@ -156,7 +156,21 @@ body
         border-radius: 50px
 
 
+  .newsletter
+    form.input-group
+      width: 500px
 
+    .newsletter__input
+      text-indent: 10px
+      border-top-left-radius: 20px 
+      border-bottom-left-radius: 20px
+      
+      &:invalid
+        border-color: lighten(red, 40%)
+
+    .newsletter__btn
+      border-top-right-radius: 20px !important
+      border-bottom-right-radius: 20px !important
 
 
   @media (max-width: 992px)
@@ -173,6 +187,8 @@ body
       article
         .icon
           display none   
+
+  
 
 
 
