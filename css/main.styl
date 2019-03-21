@@ -28,6 +28,11 @@ $color_falcon = #b71c1c;
     margin-left -15px
     background-color $color_falcon
 
+.modal__btn--border
+  padding-left 20px
+  padding-right: 20px
+  border-radius: 25px
+
 .icon
   background-color: $color_falcon
 
@@ -142,11 +147,11 @@ body
 
     .card
       border-radius 25px  
-      box-shadow: 0 8px 15px rgba(33,37,41,.09)
-      transition 0.5s box-shadow ease
+      transition 0.5s all ease
       
       &:hover
-        box-shadow: 0 8px 15px rgba(33,37,41,.3)
+        box-shadow: 0 8px 15px rgba(33,37,41,.1)
+        transform: scale(1.01)
 
       .card-img-top
         border-top-left-radius: 25px
@@ -166,11 +171,16 @@ body
       border-bottom-left-radius: 20px
       
       &:invalid
-        border-color: lighten(red, 40%)
+        border-color: lighten($color_falcon, 30%)
+        background-color: lighten($color_falcon, 90%)
+
+      &:valid
+        border-color: lighten(invert($color_falcon), 30%)
+        background-color: lighten(invert($color_falcon), 80%)
 
     .newsletter__btn
-      border-top-right-radius: 20px !important
-      border-bottom-right-radius: 20px !important
+      border-top-right-radius: 15px !important
+      border-bottom-right-radius: 15px !important
 
 
   @media (max-width: 992px)
